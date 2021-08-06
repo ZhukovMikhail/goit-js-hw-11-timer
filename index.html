@@ -5,6 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Permanent Marker', cursive;
+      }
+      .timer {
+        display: flex;
+        margin-left: 30px;
+        margin-top: 30px;
+      }
+
+      .field {
+        margin-left: 5px;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(#078fff 30%, #6dd5fa 85%, #9fcbf3);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
+
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+        border-radius: 5%;
+        color: beige;
+      }
+      .field .value {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 60px;
+        font-weight: 900;
+      }
+    </style>
   </head>
   <body>
     <div class="timer" id="timer-1">
