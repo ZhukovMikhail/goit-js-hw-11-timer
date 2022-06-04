@@ -25,10 +25,10 @@ class CountdownTimer {
   startTimer() {
     this.intervalId = setInterval(() => {
       if (this.time() <= 0) {
-        this.refs.Days.textContent = '00';
-        this.refs.Hours.textContent = '00';
-        this.refs.Minutes.textContent = '00';
-        this.refs.Seconds.textContent = '00';
+        this.refs.Days.textContent = '0 0';
+        this.refs.Hours.textContent = '0 0';
+        this.refs.Minutes.textContent = '0 0';
+        this.refs.Seconds.textContent = '0 0';
         clearInterval(this.intervalId);
         this.refs.timerId.insertAdjacentHTML(
           'beforebegin',
@@ -65,7 +65,16 @@ class CountdownTimer {
 const test = new CountdownTimer({
   selector: '#timer-1',
   targetDate: new Date('Aug 17, 2021'),
+  // targetDate: new Date(2021, 7, 8, 12, 10, 25, 0),
 });
 
 test.startTimer();
 // console.log(test.time());
+
+const test2 = new CountdownTimer({
+  selector: '#timer-2',
+  // targetDate: new Date('Aug 10, 2021'),
+  targetDate: new Date(2022, 7, 8, 15, 26, 0, 0),
+});
+
+test2.startTimer();
